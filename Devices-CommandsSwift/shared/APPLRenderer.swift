@@ -10,10 +10,10 @@ import Foundation
 import MetalKit
 
 public struct Color {
-    var red:Float
-    var green:Float
-    var blue:Float
-    var alpha:Float
+    var red:Double
+    var green:Double
+    var blue:Double
+    var alpha:Double
 }
 
 class Renderer : NSObject{
@@ -32,10 +32,10 @@ class Renderer : NSObject{
          struct fancyColorDescriptor {
             static var growing = true
             static var primaryChannel = 0
-            static var colorChannels : [Float] = [1.0, 0.0 ,0.0, 1.0]
+            static var colorChannels : [Double] = [1.0, 0.0 ,0.0, 1.0]
         }
         
-        let dynamicColorRate: Float = 0.015
+        let dynamicColorRate: Double = 0.015
         
         if (fancyColorDescriptor.growing) {
             let  dynamicChannelIndex = (fancyColorDescriptor.primaryChannel + 1) % 3
@@ -53,7 +53,7 @@ class Renderer : NSObject{
                 fancyColorDescriptor.growing = true
             }
         }
-     return  Color(red: fancyColorDescriptor.colorChannels[0],green: fancyColorDescriptor.colorChannels[1], blue: fancyColorDescriptor.colorChannels[2], alpha: fancyColorDescriptor.colorChannels[3])
+     return  Color(red: fancyColorDescriptor.colorChannels[0], green: fancyColorDescriptor.colorChannels[1], blue: fancyColorDescriptor.colorChannels[2], alpha: fancyColorDescriptor.colorChannels[3])
         
    }
 }
@@ -77,11 +77,9 @@ extension Renderer :MTKViewDelegate{
             renderEncoder.endEncoding()
             
             if let currentDrawable = view.currentDrawable {
-                commandBuffer.present(view.currentDrawable)
+                commandBuffer.present(currentDrawable)
             }
         }
         commandBuffer.commit()
     }
-    
-    
 }
