@@ -13,6 +13,7 @@
 		C0BF5C961EE95051003E7725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0BF5C941EE95051003E7725 /* Main.storyboard */; };
 		C0BF5C981EE95051003E7725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0BF5C971EE95051003E7725 /* Assets.xcassets */; };
 		C0BF5C9B1EE95051003E7725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0BF5C991EE95051003E7725 /* LaunchScreen.storyboard */; };
+		C0BF5CA31EE950E6003E7725 /* APPLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF5CA21EE950E6003E7725 /* APPLRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C0BF5C971EE95051003E7725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0BF5C9A1EE95051003E7725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0BF5C9C1EE95051003E7725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0BF5CA21EE950E6003E7725 /* APPLRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APPLRenderer.swift; path = shared/APPLRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C0BF5C8E1EE95051003E7725 /* AppDelegate.swift */,
 				C0BF5C901EE95051003E7725 /* GameViewController.swift */,
+				C0BF5CA21EE950E6003E7725 /* APPLRenderer.swift */,
 				C0BF5C921EE95051003E7725 /* Shaders.metal */,
 				C0BF5C941EE95051003E7725 /* Main.storyboard */,
 				C0BF5C971EE95051003E7725 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0BF5C931EE95051003E7725 /* Shaders.metal in Sources */,
+				C0BF5CA31EE950E6003E7725 /* APPLRenderer.swift in Sources */,
 				C0BF5C911EE95051003E7725 /* GameViewController.swift in Sources */,
 				C0BF5C8F1EE95051003E7725 /* AppDelegate.swift in Sources */,
 			);
